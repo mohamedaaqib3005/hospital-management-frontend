@@ -8,7 +8,7 @@
   </head>
   <body>
     <header>
-      <h1 class="logo">GWC</h1>
+      <h1 class="logo">GWS</h1>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -29,22 +29,30 @@
           letters
         </p>
       </section>
-      <form>
+      <form id ="registerForm" >
         <h2>Register now to avail a free appointment</h2>
-        <form action="Register">
-          <label for="name ">Fill in your full name</label>
+       
+          <label for="name">Fill in your full name</label>
           <input type="text" name="full-name" id="name" />
           <label for="username">Username </label>
           <input type="text" name="username" id="username" />
           <label for="gender">Gender</label>
-          <input type="text" name="gender" id="gender" />
-          <label for="age">Enter your Date of Birth</label>
-          <input type="text" name="dob" id="dob" />
+          <div class="gender-options">
+          <input type="checkbox" name="male" id="male"  />
+          <label for="male">Male</label>
+          <input type="checkbox" name="female" id="female"  />
+          <label for="female">Female</label>
+          <input type="checkbox" name="others" id="others"  />
+          <label for="others">Others</label>
+          </div>
+          <label for="dob">Enter your Date of Birth</label>
+          <input type="date" name="dob" id="dob" />
           <label for="password">Enter Your Password</label>
           <input type="text" name="password" id="password" />
-          <input type="button" value="Register" />
-        </form>
+          <input type="submit" value="Register" />
+      
       </form>
+      <p id="registrationStatus"></p>
     </main>
 
     <footer></footer>
