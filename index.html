@@ -29,32 +29,36 @@
           letters
         </p>
       </section>
-      <form id ="registerForm" >
+      <form id="registerForm">
         <h2>Register now to avail a free appointment</h2>
-       
-          <label for="name">Fill in your full name</label>
+
+        <label for="name"
+          >Fill in your full name
           <input type="text" name="full-name" id="name" />
-          <label for="username">Username </label>
-          <input type="text" name="username" id="username" />
-          <label for="gender">Gender</label>
-          <div class="gender-options">
-          <input type="checkbox" name="male" id="male"  />
+        </label>
+        <label for="username">Username </label>
+        <input type="text" name="username" id="username" />
+        <label for="gender">Gender</label>
+        <div class="gender-options">
+          <input type="radio" name="gender" value="male" id="male" />
           <label for="male">Male</label>
-          <input type="checkbox" name="female" id="female"  />
+          <input type="radio" name="gender" value="female" id="female" />
           <label for="female">Female</label>
-          <input type="checkbox" name="others" id="others"  />
+          <input type="radio" name="gender" value="others" id="others" />
           <label for="others">Others</label>
-          </div>
-          <label for="dob">Enter your Date of Birth</label>
-          <input type="date" name="dob" id="dob" />
-          <label for="password">Enter Your Password</label>
-          <input type="text" name="password" id="password" />
-          <input type="submit" value="Register" />
-      
+        </div>
+
+        <label for="dob">Enter your Date of Birth</label>
+        <input type="date" name="dob" id="dob" />
+        <label for="password">Enter Your Password</label>
+        <input type="text" name="password" id="password" />
+        <input type="submit" value="Register" />
       </form>
       <p id="registrationStatus"></p>
     </main>
 
     <footer></footer>
   </body>
+  <script src="./js/request.js"></script>
+  <script src="./js/auth.js"></script>
 </html>

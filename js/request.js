@@ -1,6 +1,8 @@
 const baseUrl = "http://localhost:5000/api";
+
 async function registerPatient(data) {
   try {
+    console.log("Sending data to backend:", data);
     const response = await fetch(`${baseUrl}/patients`, {
       method: "POST",
       headers: {
@@ -13,6 +15,7 @@ async function registerPatient(data) {
     if (!response.ok) {
       throw new Error("Registration failed");
     }
+    console.log(result);
 
     // alert("Registration successful")
     return result;
@@ -27,7 +30,7 @@ async function loginPatient(data) {
     const response = await fetch("http://127.0.0.1:5500/sessions", {
       method: "POST",
       headers: {
-        "Content-Type ": "application/json",
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
     });

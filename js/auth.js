@@ -1,30 +1,50 @@
-document.getElementById("registerForm").addEventListener("submit",async function(e){
- e.preventDefault();
-})
+console.log("auth.js loaded");
 
-const genderInput = form.querySelector('input[name="gender"]:checked');
-const gender =genderInput?genderInput.value:"";
+const registrationForm = document.getElementById("registerForm");
 
-const form = e.target;
-const data = {
-   fullname:form.name.value,
-   username:form.username.value,
-   dob:form.dob.value,
-   gender:form.gender.value,
-   password:form.password.value,
-};
+registrationForm.addEventListener("submit", sendFormData);
 
-const result = await registerPatient(data)
+async function sendFormData(e) {
+  e.preventDefault();
 
+  const fullname = document.getElementById("name").value;
+  const username = document.getElementById("username").value;
+  const dob = document.getElementById("dob").value;
+  const password = document.getElementById("password").value;
 
-const status = document.getElementById("registration Status")
-if (result){
-    status.innerText="Registration Successful";
-    status.style.color="green";
-}else{
-    status.innerText="Registration failed";
-    status.style.color="red"
+  const genderInput = document.querySelector('input[name="gender"]:checked');
+  const gender = genderInput ? genderInput.value : "";
+
+  const data = {
+    fullname,
+    username,
+    dob,
+    password,
+    gender,
+  };
+
+  const status = document.getElementById("registrationStatus");
+
+  try {
+    const result = await registerPatient(data);
+    status.innerText = "Registration successful!";
+    status.style.color = "green";
+  } catch (error) {
+    status.innerText = "Registration failed: " + error.message;
+    status.style.color = "red";
+  }
 }
 
+// const genderInput = form.querySelector('input[name="gender"]:checked');
+// const gender = genderInput ? genderInput.value : "";
 
+// const result = await registerPatient(data);
 
+// const status = document.getElementById("registrationStatus");
+// if (result) {
+//   status.innerText = "Registration Successful";
+//   status.style.color = "green";
+// } else {
+//   status.innerText = "Registration failed";
+//   status.style.color = "red";
+// }
