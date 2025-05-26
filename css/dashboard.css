@@ -65,7 +65,13 @@ section {
   padding: 2rem;
 }
 
-img {
+
+
+figure{
+   text-align: center;
+}
+
+figure img {
   height: 250px;
   width: 250px;
   border-radius: 50%;

@@ -22,43 +22,53 @@
     <main>
       <section class="hero">
         <h1>Get Well Soon Hospitals</h1>
-        <p>
-          t is a long established fact that a reader will be distracted by the
+        <div>
+          it is a long established fact that a reader will be distracted by the
           readable content of a page when looking at its layout. The point of
           using Lorem Ipsum is that it has a more-or-less normal distribution of
           letters
-        </p>
+        </div>
       </section>
       <form id="registerForm">
         <h2>Register now to avail a free appointment</h2>
 
-        <label for="name"
+        <label for="fullName"
           >Fill in your full name
-          <input type="text" name="full-name" id="name" />
+          <input type="text" name="full-name" id="fullName" />
         </label>
-        <label for="username">Username </label>
-        <input type="text" name="username" id="username" />
-        <label for="gender">Gender</label>
-        <div class="gender-options">
-          <input type="radio" name="gender" value="male" id="male" />
-          <label for="male">Male</label>
-          <input type="radio" name="gender" value="female" id="female" />
-          <label for="female">Female</label>
-          <input type="radio" name="gender" value="others" id="others" />
-          <label for="others">Others</label>
-        </div>
+        <label for="userName"
+          >Username
+          <input type="text" name="username" id="userName" />
+        </label>
 
-        <label for="dob">Enter your Date of Birth</label>
-        <input type="date" name="dob" id="dob" />
-        <label for="password">Enter Your Password</label>
-        <input type="text" name="password" id="password" />
+        <label for="gender"
+          >Gender
+          <div class="gender-options">
+            <input type="radio" name="gender" value="male" id="male" />
+            <label for="male">Male</label>
+            <input type="radio" name="gender" value="female" id="female" />
+            <label for="female">Female</label>
+            <input type="radio" name="gender" value="others" id="others" />
+            <label for="others">Others</label>
+          </div></label
+        >
+
+        <label for="dob"
+          >Enter your Date of Birth <input type="date" name="dob" id="dob" />
+        </label>
+
+        <label for="password"
+          >Enter Your Password
+          <input type="text" name="password" id="password" />
+        </label>
+
         <input type="submit" value="Register" />
       </form>
-      <p id="registrationStatus"></p>
+      <div id="registrationStatus"></div>
     </main>
 
     <footer></footer>
   </body>
-  <script src="./js/request.js"></script>
-  <script src="./js/auth.js"></script>
+  <!-- <script src="./js/request.js"></script> -->
+  <script type="module" src="./js/auth.js"></script>
 </html>
