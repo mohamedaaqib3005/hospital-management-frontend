@@ -1,4 +1,4 @@
-import { registerPatient } from "./request.js";
+import { registerPatient,loginPatient} from "./request.js";
 
 const registrationForm = document.getElementById("registerForm");
 
@@ -10,7 +10,7 @@ async function sendFormData(e) {
 	const fullName = document.getElementById("fullName").value;
 	const userName = document.getElementById("userName").value;
 	const dob = document.getElementById("dob").value;
-	const password = document.getElementById("password").value;
+	const password = document.getElementById("registerPassword").value;
 
 	const genderInput = document.querySelector('input[name="gender"]:checked');
 	const gender = genderInput ? genderInput.value : "";
@@ -36,17 +36,24 @@ async function sendFormData(e) {
 		status.style.color = "red";
 	}
 }
+// Login Form
+const loginForm = document.getElementById("loginForm");
 
-// const genderInput = form.querySelector('input[name="gender"]:checked');
-// const gender = genderInput ? genderInput.value : "";
+loginForm?.addEventListener("submit", loginUser);
 
-// const result = await registerPatient(data);
+async function loginUser(e) {
+	e.preventDefault();
 
-// const status = document.getElementById("registrationStatus");
-// if (result) {
-//   status.innerText = "Registration Successful";
-//   status.style.color = "green";
-// } else {
-//   status.innerText = "Registration failed";
-//   status.style.color = "red";
-// }
+	const userName = document.getElementById("loginUsername").value;
+	const password = document.getElementById("loginPassword").value;
+    const loginStatus = document.getElementById("loginStatus");
+
+	try {
+		const result = await loginPatient({ userName, password });
+		loginStatus.innerText = result.message || "Login successful!";
+		loginStatus.style.color = "green";
+	} catch (error) {
+		loginStatus.innerText = `Login failed: ${error.message}`;
+		loginStatus.style.color = "red";
+	}
+}

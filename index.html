@@ -57,13 +57,31 @@
           >Enter your Date of Birth <input type="date" name="dob" id="dob" />
         </label>
 
-        <label for="password"
+        <label for="registerPassword"
           >Enter Your Password
-          <input type="text" name="password" id="password" />
+          <input type="text" name="password" id="registerPassword" />
         </label>
 
         <input type="submit" value="Register" />
       </form>
+
+      <form id="loginForm">
+        <h2>Login</h2>
+        <label for="loginUsername"
+          >Username:
+          <input type="text" name="username" id="loginUsername" required />
+        </label>
+
+        <label for="loginPassword"
+          >Password:
+          <input type="password" name="password" id="loginPassword" required />
+        </label>
+
+        <input type="submit" value="Login" />
+      </form>
+
+      <div id="loginStatus"></div>
+
       <div id="registrationStatus"></div>
     </main>
 
