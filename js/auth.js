@@ -1,4 +1,4 @@
-import { registerPatient,loginPatient} from "./request.js";
+import { registerPatient, loginPatient } from "./request.js";
 
 const registrationForm = document.getElementById("registerForm");
 
@@ -46,7 +46,7 @@ async function loginUser(e) {
 
 	const userName = document.getElementById("loginUsername").value;
 	const password = document.getElementById("loginPassword").value;
-    const loginStatus = document.getElementById("loginStatus");
+	const loginStatus = document.getElementById("loginStatus");
 
 	try {
 		const result = await loginPatient({ userName, password });
@@ -57,3 +57,10 @@ async function loginUser(e) {
 		loginStatus.style.color = "red";
 	}
 }
+
+const modal = document.getElementById("loginModal");
+const closeBtn = document.getElementById("closeModal");
+
+closeBtn.addEventListener("click", () => {
+	modal.style.display = "none";
+});
