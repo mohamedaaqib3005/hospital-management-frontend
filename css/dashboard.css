@@ -25,9 +25,8 @@ header {
 	grid-template-columns: 2fr 1fr;
 }
 nav {
-	align-items: center;
-	margin-top: 0.5em;
-	padding-right: 0;
+	justify-self: end;
+	align-self: center;
 }
 
 ul {
@@ -61,17 +60,20 @@ h2 {
 section {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 	gap: 2rem;
 	padding: 2rem;
 }
 
 figure {
 	text-align: center;
-	display: inline-block;
+}
+figure img:hover {
+	transform: scale(1.05);
 }
 
 figure a {
-	/* display: inline-block; */
+	display: inline-block;
 }
 
 figure img {
@@ -89,13 +91,13 @@ figcaption {
 }
 
 .modal {
-  display: none; 
-  position: fixed;
+	display: none;
+	position: fixed;
 }
 
 .close {
-  color: #aaa;
-  float: right;
-  font-weight: bold;
-  cursor: pointer;
+	color: #aaa;
+	float: right;
+	font-weight: bold;
+	cursor: pointer;
 }

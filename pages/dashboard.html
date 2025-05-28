@@ -6,18 +6,19 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="../css/dashboard.css" />
   </head>
-  <header>
-    <h1 class="logo">GWS</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="doctor-list.html">About</a></li>
-        <li><a href="doctor-list.html">Login</a></li>
-        <li><a href="register">Register</a></li>
-      </ul>
-    </nav>
-  </header>
   <body>
+    <header id="user-header" style="display: grid">
+      <h1 class="logo">GWS</h1>
+      <nav>
+        <ul>
+          <li><span id="user-greeting">Hello, User</span></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="appointments.html">Appointments</a></li>
+          <li><button onclick="logout()">Logout</button></li>
+        </ul>
+      </nav>
+    </header>
+
     <main>
       <h2>Consult top doctors for any health concern</h2>
       <section>
@@ -55,5 +56,6 @@
         </figure>
       </section>
     </main>
+    <script type="module" src="../js/dashboard.js"></script>
   </body>
 </html>

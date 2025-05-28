@@ -48,19 +48,41 @@ async function loginUser(e) {
 	const password = document.getElementById("loginPassword").value;
 	const loginStatus = document.getElementById("loginStatus");
 
+	const data = {
+		userName,
+		password,
+	};
+	console.log("the data sent to backend", data);
 	try {
-		const result = await loginPatient({ userName, password });
-		loginStatus.innerText = result.message || "Login successful!";
+		const response = await loginPatient(data);
+
+		localStorage.setItem("isLoggedIn", "true");
+		localStorage.setItem("userName", userName);
+
+		loginStatus.innerText = "Login successful!";
 		loginStatus.style.color = "green";
+
+		setTimeout(() => {
+			window.location.href =
+				"http://127.0.0.1:5500/frontend/pages/dashboard.html";
+		}, 1000);
 	} catch (error) {
 		loginStatus.innerText = `Login failed: ${error.message}`;
 		loginStatus.style.color = "red";
 	}
 }
-
-const modal = document.getElementById("loginModal");
+// popup
+const loginLink = document.getElementById("loginLink");
+const loginDialog = document.getElementById("loginModal");
 const closeBtn = document.getElementById("closeModal");
 
-closeBtn.addEventListener("click", () => {
-	modal.style.display = "none";
+loginLink.addEventListener("click", (e) => {
+	e.preventDefault();
+	loginDialog.showModal();
+});
+
+closeBtn.addEventListener("click", () => loginDialog.close());
+
+loginDialog.addEventListener("click", (e) => {
+	if (e.target === loginDialog) loginDialog.close();
 });

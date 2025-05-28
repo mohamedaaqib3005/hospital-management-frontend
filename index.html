@@ -1,48 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Get Well Soon Hospital</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-  </head>
-  <body>
-    <header>
-      <h1 class="logo">GWS</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="doctor-list.html">About</a></li>
-          <li><a href="doctor-list.html">Login</a></li>
-          <li><a href="register">Register</a></li>
-        </ul>
-      </nav>
-    </header>
 
-    <main>
-      <section class="hero">
-        <h1>Get Well Soon Hospitals</h1>
-        <div>
-          it is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters
-        </div>
-      </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get Well Soon Hospital</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body>
+  <header>
+    <h1 class="logo">GWS</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="doctor-list.html">About</a></li>
+        <li><a href="doctor-list.html">Login</a></li>
+        <li><a href="register">Register</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Get Well Soon Hospitals</h1>
+      <div>
+        it is a long established fact that a reader will be distracted by the
+        readable content of a page when looking at its layout. The point of
+        using Lorem Ipsum is that it has a more-or-less normal distribution of
+        letters
+      </div>
+    </section>
+    <section>
       <form id="registerForm">
         <h2>Register now to avail a free appointment</h2>
 
-        <label for="fullName"
-          >Fill in your full name
+        <label for="fullName">Fill in your full name
           <input type="text" name="full-name" id="fullName" />
         </label>
-        <label for="userName"
-          >Username
+        <label for="userName">Username
           <input type="text" name="username" id="userName" />
         </label>
 
-        <label for="gender"
-          >Gender
+        <label for="gender">Gender
           <div class="gender-options">
             <input type="radio" name="gender" value="male" id="male" />
             <label for="male">Male</label>
@@ -50,51 +50,54 @@
             <label for="female">Female</label>
             <input type="radio" name="gender" value="others" id="others" />
             <label for="others">Others</label>
-          </div></label
-        >
-
-        <label for="dob"
-          >Enter your Date of Birth <input type="date" name="dob" id="dob" />
+          </div>
         </label>
 
-        <label for="registerPassword"
-          >Enter Your Password
+        <label for="dob">Enter your Date of Birth <input type="date" name="dob" id="dob" />
+        </label>
+
+        <label for="registerPassword">Enter Your Password
           <input type="text" name="password" id="registerPassword" />
         </label>
 
         <input type="submit" value="Register" />
       </form>
-      <div id="loginModal" class="modal">
-        <div class="modal-content">
-          <span id="closeModal" class="close">&times;</span>
-          <form id="loginForm">
-            <h2>Login</h2>
-            <label for="loginUsername"
-              >Username:
-              <input type="text" name="username" id="loginUsername" required />
-            </label>
+      <!-- <div id="loginModal" class="modal">
+        <div class="modal-content"> -->
 
-            <label for="loginPassword"
-              >Password:
-              <input
-                type="password"
-                name="password"
-                id="loginPassword"
-                required
-              />
-            </label>
+      <dialog id="loginModal">
+        <button id="closeModal" class="close">&times;</button>
 
-            <input type="submit" value="Login" />
-          </form>
-          <div id="popupLoginStatus"></div>
-        </div>
+        <form id="loginForm" method="dialog">
+          <h2>Login</h2>
+
+          <label for="loginUsername">Username
+            <input type="text" id="loginUsername" name="userName" required />
+          </label>
+
+          <label for="loginPassword">Password
+            <input type="password" id="loginPassword" name="password" required />
+          </label>
+
+          <button type="submit">Login</button>
+        </form>
+
+        <div id="loginStatus"></div>
+      </dialog>
+      <div>
+        <button id="loginLink">Login</button>
       </div>
+    </section>
+    <!-- <div id="popupLoginStatus"></div>
+        </div>
+      </div> -->
 
-      <div id="registrationStatus"></div>
-    </main>
+    <div id="registrationStatus"></div>
+  </main>
 
-    <footer></footer>
-  </body>
-  <!-- <script src="./js/request.js"></script> -->
-  <script type="module" src="./js/auth.js"></script>
+  <footer></footer>
+</body>
+<!-- <script src="./js/request.js"></script> -->
+<script type="module" src="./js/auth.js"></script>
+
 </html>
