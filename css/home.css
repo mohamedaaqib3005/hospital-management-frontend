@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
+:root {
+  --primary-color: #047aed;
+  --primary-light: #369dff;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -16,17 +21,18 @@ body {
 }
 
 header {
-  background-color: #047aed;
+  background-color: var(--primary-color);
   color: white;
   padding: 1.25rem 3.6rem;
   overflow: auto;
   display: grid;
   grid-template-columns: 2fr 1fr;
 }
+
 nav {
   align-items: center;
   margin-top: 0.5em;
-  padding-right:0;
+  padding-right: 0;
 }
 
 ul {
@@ -56,8 +62,20 @@ section {
   padding: 0 4rem;
   width: 100%;
   max-width: 1100px;
-  margin: auto 0 ;
+  margin: auto 0;
 
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: white;
 }
 
 form {
@@ -67,31 +85,54 @@ form {
   padding: 2em;
 }
 
-.gender-options{
+.gender-options {
   display: inline;
-  gap:0.5rem;
+  gap: 0.5rem;
+
+}
+
+.button-primary {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-primary:hover {
+  background-color: var(--primary-light);
+}
+
+dialog {
+  border: none;
+  border-radius: 10px;
+  padding: 2rem;
+  width: 300px;
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
 
 }
 
 dialog::backdrop {
-  background-image: linear-gradient(
-    45deg,
-    magenta,
-    rebeccapurple,
-    dodgerblue,
-    green
-  );
-  opacity: 0.75;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
-#loginForm{
+#loginForm {
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 1rem;
   padding: 2em;
 }
-#showDialog{
-display: flex;
-justify-content: center;
-}
 
+#showDialog {
+  display: flex;
+  justify-content: center;
+}
