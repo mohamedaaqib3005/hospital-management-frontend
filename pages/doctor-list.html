@@ -1,183 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Doctors</title>
-    <link rel="stylesheet" href="../css/doctor-list.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
+    <link rel="stylesheet" href="../css/doctor-list.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
 
-<body>
+  <body>
     <header>
-        <h1 class="logo">GWS</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="doctor-list.html">About</a></li>
-                <li><a href="doctor-list.html">Login</a></li>
-                <li><a href="register">Register</a></li>
-            </ul>
-        </nav>
+      <a href="http://127.0.0.1:5500/frontend/index.html">
+        <h1 class="logo">GWS</h1></a
+      >
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="doctor-list.html">About</a></li>
+          <li><a href="doctor-list.html">Login</a></li>
+          <li><a href="register">Register</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <div class="card-container">
-            <div class="side-profile">
-                <img src="../assets/pexels-konrads-photo-32205061.jpg" alt="">
-                <ul class="social-icons">
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                </ul>
-            </div>
-            <div class="details">
-                <h2>${doctor.name}</h2>
-                <p class="specialization">Laparoscopic Surgeon</p>
-                <p class="experience">20 years experience overall</p>
-                <div class="date-selection">
-                    <label for="appointment-date">Select Date:</label>
-                    <input type="date" id="appointment-date" name="appointment-date">
-                </div>
-
-                <div class="slot-selection">
-                    <p>Appointment Slot:</p>
-                    <label><input type="radio" name="slot" value="10:00 AM"> 10:00 AM</label>
-                    <label><input type="radio" name="slot" value="11:00 AM"> 11:00 AM</label>
-                    <label><input type="radio" name="slot" value="12:00 PM"> 12:00 PM</label>
-                </div>
-                <button class="book-btn">Book Appointment</button>
-            </div>
-            <span></span>
-
-
-
+      <div class="card-container">
+        <div class="side-profile">
+          <img src="../assets/pexels-konrads-photo-32205061.jpg" alt="" />
+          <ul class="social-icons">
+            <li>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </li>
+          </ul>
         </div>
-        <div class="card-container">
-            <div class="side-profile">
-                <img src="../assets/pexels-karolina-grabowska-5206931.jpg" alt="">
-                <ul class="social-icons">
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                </ul>
-            </div>
-            <div class="details">
-                <h2>${doctor.name}</h2>
-                <p class="specialization">Laparoscopic Surgeon</p>
-                <p class="experience">20 years experience overall</p>
-                <div class="date-selection">
-                    <label for="appointment-date">Select Date:</label>
-                    <input type="date" id="appointment-date" name="appointment-date">
-                </div>
+        <div class="details">
+          <h2>${doctor_id}</h2>
+          <h3 class="specialization">Surgeon</h3>
+          <div class="experience">20 years experience overall</div>
+          <div class="date-selection">
+            <label for="appointment-date">Select Date:</label>
+            <input type="date" id="appointment-date" name="appointment-date" />
+          </div>
 
-                <div class="slot-selection">
-                    <p>Appointment Slot:</p>
-                    <label><input type="radio" name="slot" value="10:00 AM"> 10:00 AM</label>
-                    <label><input type="radio" name="slot" value="11:00 AM"> 11:00 AM</label>
-                    <label><input type="radio" name="slot" value="12:00 PM"> 12:00 PM</label>
-                </div>
-                <button class="book-btn">Book Appointment</button>
-            </div>
-            <span></span>
-
-
-
+          <div class="slot-selection">
+            <label>Appointment Slot:</label>
+            <label
+              ><input type="radio" name="slot" value="10:00 AM" /> 10:00
+              AM</label
+            >
+            <label
+              ><input type="radio" name="slot" value="11:00 AM" /> 11:00
+              AM</label
+            >
+            <label
+              ><input type="radio" name="slot" value="12:00 PM" /> 12:00
+              PM</label
+            >
+          </div>
+          <button class="book-btn">Book Appointment</button>
         </div>
-        <div class="card-container">
-            <div class="side-profile">
-                <img src="../assets/pexels-konrads-photo-32254662.jpg" alt="">
-                <ul class="social-icons">
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                </ul>
-            </div>
-            <div class="details">
-                <h2>${doctor.name}</h2>
-                <p class="specialization">Laparoscopic Surgeon</p>
-                <p class="experience">20 years experience overall</p>
-                <div class="date-selection">
-                    <label for="appointment-date">Select Date:</label>
-                    <input type="date" id="appointment-date" name="appointment-date">
-                </div>
-
-                <div class="slot-selection">
-                    <p>Appointment Slot:</p>
-                    <label><input type="radio" name="slot" value="10:00 AM"> 10:00 AM</label>
-                    <label><input type="radio" name="slot" value="11:00 AM"> 11:00 AM</label>
-                    <label><input type="radio" name="slot" value="12:00 PM"> 12:00 PM</label>
-                </div>
-                <button class="book-btn">Book Appointment</button>
-            </div>
-            <span></span>
-
-
-
+        <span></span>
+      </div>
+      <div class="card-container">
+        <div class="side-profile">
+          <img src="../assets/pexels-karolina-grabowska-5206931.jpg" alt="" />
+          <ul class="social-icons">
+            <li>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </li>
+          </ul>
         </div>
-        <div class="card-container">
-            <div class="side-profile">
-                <img src="../assets/pexels-pavel-danilyuk-5998474.jpg" alt="">
-                <ul class="social-icons">
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                </ul>
-            </div>
-            <div class="details">
-                <h2>${doctor.name}</h2>
-                <p class="specialization">Laparoscopic Surgeon</p>
-                <p class="experience">20 years experience overall</p>
-                <div class="date-selection">
-                    <label for="appointment-date">Select Date:</label>
-                    <input type="date" id="appointment-date" name="appointment-date">
-                </div>
+        <div class="details">
+          <h2>${doctor_id}</h2>
+          <p class="specialization">Surgeon</p>
+          <p class="experience">20 years experience overall</p>
+          <div class="date-selection">
+            <label for="appointment-date">Select Date:</label>
+            <input type="date" id="appointment-date" name="appointment-date" />
+          </div>
 
-                <div class="slot-selection">
-                    <p>Appointment Slot:</p>
-                    <label><input type="radio" name="slot" value="10:00 AM"> 10:00 AM</label>
-                    <label><input type="radio" name="slot" value="11:00 AM"> 11:00 AM</label>
-                    <label><input type="radio" name="slot" value="12:00 PM"> 12:00 PM</label>
-                </div>
-                <button class="book-btn" class="button-primary">Book Appointment</button>
-            </div>
-            <span></span>
-
-
-
+          <div class="slot-selection">
+            <p>Appointment Slot:</p>
+            <label
+              ><input type="radio" name="slot" value="10:00 AM" /> 10:00
+              AM</label
+            >
+            <label
+              ><input type="radio" name="slot" value="11:00 AM" /> 11:00
+              AM</label
+            >
+            <label
+              ><input type="radio" name="slot" value="12:00 PM" /> 12:00
+              PM</label
+            >
+          </div>
+          <button class="book-btn">Book Appointment</button>
         </div>
-        <div class="card-container">
-            <div class="side-profile">
-                <img src="../assets/pexels-shkrabaanthony-6749777.jpg" alt="">
-                <ul class="social-icons">
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                </ul>
-            </div>
-            <div class="details">
-                <h2>${doctor.name}</h2>
-                <p class="specialization">Laparoscopic Surgeon</p>
-                <p class="experience">20 years experience overall</p>
-                <div class="date-selection">
-                    <label for="appointment-date">Select Date:</label>
-                    <input type="date" id="appointment-date" name="appointment-date">
-                </div>
-
-                <div class="slot-selection">
-                    <p>Appointment Slot:</p>
-                    <label><input type="radio" name="slot" value="10:00 AM"> 10:00 AM</label>
-                    <label><input type="radio" name="slot" value="11:00 AM"> 11:00 AM</label>
-                    <label><input type="radio" name="slot" value="12:00 PM"> 12:00 PM</label>
-                </div>
-                <button class="book-btn">Book Appointment</button>
-            </div>
-
-
-
+        <span></span>
+      </div>
+      <div class="card-container">
+        <div class="side-profile">
+          <img src="../assets/pexels-konrads-photo-32254662.jpg" alt="" />
+          <ul class="social-icons">
+            <li>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </li>
+          </ul>
         </div>
+        <div class="details">
+          <h2>${doctor_id}</h2>
+          <p class="specialization">Surgeon</p>
+          <p class="experience">20 years experience overall</p>
+          <div class="date-selection">
+            <label for="appointment-date">Select Date:</label>
+            <input type="date" id="appointment-date" name="appointment-date" />
+          </div>
+
+          <div class="slot-selection">
+            <p>Appointment Slot:</p>
+            <label
+              ><input type="radio" name="slot" value="10:00 AM" /> 10:00
+              AM</label
+            >
+            <label
+              ><input type="radio" name="slot" value="11:00 AM" /> 11:00
+              AM</label
+            >
+            <label
+              ><input type="radio" name="slot" value="12:00 PM" /> 12:00
+              PM</label
+            >
+          </div>
+          <button class="book-btn">Book Appointment</button>
+        </div>
+        <span></span>
+      </div>
+      <div class="card-container">
+        <div class="side-profile">
+          <img src="../assets/pexels-pavel-danilyuk-5998474.jpg" alt="" />
+          <ul class="social-icons">
+            <li>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="details">
+          <h2>${doctor_id}</h2>
+          <p class="specialization">Surgeon</p>
+          <p class="experience">20 years experience overall</p>
+          <div class="date-selection">
+            <label for="appointment-date">Select Date:</label>
+            <input type="date" id="appointment-date" name="appointment-date" />
+          </div>
+
+          <div class="slot-selection">
+            <p>Appointment Slot:</p>
+            <label
+              ><input type="radio" name="slot" value="10:00 AM" /> 10:00
+              AM</label
+            >
+            <label
+              ><input type="radio" name="slot" value="11:00 AM" /> 11:00
+              AM</label
+            >
+            <label
+              ><input type="radio" name="slot" value="12:00 PM" /> 12:00
+              PM</label
+            >
+          </div>
+          <button class="book-btn" class="button-primary">
+            Book Appointment
+          </button>
+        </div>
+        <span></span>
+      </div>
+      <div class="card-container">
+        <div class="side-profile">
+          <img src="../assets/pexels-shkrabaanthony-6749777.jpg" alt="" />
+          <ul class="social-icons">
+            <li>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="details">
+          <h2>${doctor_id}</h2>
+          <p class="specialization">Surgeon</p>
+          <p class="experience">20 years experience overall</p>
+          <div class="date-selection">
+            <label for="appointment-date">Select Date:</label>
+            <input type="date" id="appointment-date" name="appointment-date" />
+          </div>
+
+          <div class="slot-selection">
+            <p>Appointment Slot:</p>
+            <label
+              ><input type="radio" name="slot" value="10:00 AM" /> 10:00
+              AM</label
+            >
+            <label
+              ><input type="radio" name="slot" value="11:00 AM" /> 11:00
+              AM</label
+            >
+            <label
+              ><input type="radio" name="slot" value="12:00 PM" /> 12:00
+              PM</label
+            >
+          </div>
+          <button class="book-btn">Book Appointment</button>
+        </div>
+      </div>
     </main>
-
-</body>
-
+  </body>
 </html>

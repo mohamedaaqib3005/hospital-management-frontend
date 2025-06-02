@@ -39,7 +39,7 @@ async function sendFormData(e) {
 // Login Form
 const loginForm = document.getElementById("loginForm");
 
-loginForm?.addEventListener("submit", loginUser);
+loginForm.addEventListener("submit", loginUser);
 
 async function loginUser(e) {
 	e.preventDefault();
@@ -54,10 +54,11 @@ async function loginUser(e) {
 	};
 	console.log("the data sent to backend", data);
 	try {
-		const response = await loginPatient(data);
+		await registerPatient(data);
+		await loginPatient({ userName, password });
 
-		localStorage.setItem("isLoggedIn", "true");
-		localStorage.setItem("userName", userName);
+		// document.cookie = `isLoggedIn=true; path=/; max-age=${60 * 60 * 24}`;
+		// document.cookie = `userName=${encodeURIComponent(userName)}; path=/; max-age=${60 * 60 * 24}`;
 
 		loginStatus.innerText = "Login successful!";
 		loginStatus.style.color = "green";
