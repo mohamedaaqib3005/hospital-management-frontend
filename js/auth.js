@@ -57,9 +57,7 @@ async function loginUser(e) {
 		await registerPatient(data);
 		await loginPatient({ userName, password });
 
-		// document.cookie = `isLoggedIn=true; path=/; max-age=${60 * 60 * 24}`;
-		// document.cookie = `userName=${encodeURIComponent(userName)}; path=/; max-age=${60 * 60 * 24}`;
-
+		
 		loginStatus.innerText = "Login successful!";
 		loginStatus.style.color = "green";
 
