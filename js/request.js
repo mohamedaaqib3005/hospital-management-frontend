@@ -57,3 +57,20 @@ export async function loginPatient(data) {
     // alert("Registration failed:"+ err.message);
   }
 }
+
+export async function getDoctors(specialityId = null) {
+  const url = specialityId
+   ? `${doctorBaseUrl}/doctors?speciality=${specialityId}`
+   : `${doctorBaseUrl}/doctors`;
+
+  try {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error("Failed to fetch doctors");
+    return await res.json();
+  } catch (err) {
+    console.error("Doctor fetch error:", err.message);
+    throw err;
+  }
+}
+  
+

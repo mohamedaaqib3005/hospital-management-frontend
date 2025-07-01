@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
 :root {
   --primary-color: #047aed;
   --primary-light: #369dff;
@@ -164,13 +166,19 @@ main {
   display: inline-block;
 }
 
-.actions-btn {
+.btn {
   padding: 0.3rem 0.6rem;
   background-color: #eee;
   border: 1px solid #ccc;
-  cursor: pointer;
   border-radius: 4px;
 }
+
+
+.actions-btn {
+  cursor: pointer;
+
+}
+
 
 .actions-menu {
   display: none;

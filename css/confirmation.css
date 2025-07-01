@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
+:root {
+  --primary-color: #047aed;
+  --primary-light: #369dff;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +18,7 @@ body {
 }
 
 .header {
-    background-color: #047aed;
+    background-color: var(--primary-color);
     color: #fff;
     padding: 1rem;
     text-align: center;
@@ -66,7 +71,7 @@ td:first-child {
 }
 
 .clinic-link {
-    color: #047aed;
+    color:var(--primary-color);
     text-decoration: none;
 }
 
@@ -76,7 +81,7 @@ td:first-child {
 }
 
 .buttons button {
-    background-color: #047aed;
+    background-color:var(--primary-color);
     border: none;
     color: white;
     padding: 1rem  1.25rem;
@@ -88,7 +93,7 @@ td:first-child {
 }
 
 .buttons button:hover {
-    background-color: #369dff;
+    background-color: var(--primary-light);
 }
 
 .footer {
@@ -98,7 +103,7 @@ td:first-child {
 }
 
 .footer a {
-    color: #047aed;
+    color: var(--primary-color);
     text-decoration: none;
     font-weight: bold;
 }
