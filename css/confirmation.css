@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+:root {
+  --primary-color: #047aed;
+  --primary-light: #369dff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    line-height: 1.6;
+    color: black;
+}
+
+.header {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.header p {
+    margin: 8px 0 0;
+    color: white;
+    font-size: 14px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 2rem auto;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1.25rem;
+}
+
+.greeting {
+    margin-bottom: 1.25rem;
+}
+
+.greeting strong {
+    color: #222;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+td {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    vertical-align: top;
+}
+
+td:first-child {
+    font-weight: bold;
+    background-color: #f9f9f9;
+    width: 40%;
+}
+
+.clinic-link {
+    color:var(--primary-color);
+    text-decoration: none;
+}
+
+.buttons {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.buttons button {
+    background-color:var(--primary-color);
+    border: none;
+    color: white;
+    padding: 1rem  1.25rem;
+    margin: 5px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buttons button:hover {
+    background-color: var(--primary-light);
+}
+
+.footer {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 1.25rem;
+}
+
+.footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
